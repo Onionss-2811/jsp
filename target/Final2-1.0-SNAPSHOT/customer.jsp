@@ -88,7 +88,7 @@
                             <label class="m-2">Name: </label>
                         </div>
                         <div class="col-6">
-                            <input type="text" class="form-control" name="name" placeholder="Enter name ... " aria-label="a" required="Textbox must be entered">
+                            <input type="text" class="form-control" name="name" aria-label="a" required="Textbox must be entered" placeholder="Enter name ... " >
                         </div>
                         <div class="col">
                             <button class="btn btn-primary">Search</button>
@@ -103,19 +103,19 @@
             <div class="col-md-12">
                 <h1>Thông tin</h1>
                 <table class="table table-striped">
-                    <tr>
-                        <td>ID</td>
-                        <td>NAME</td>
-                        <td>AGE</td>
-                        <td>ADDRESS</td>
-                    </tr>
+                    <thead>
+                        <td><b>ID</b></td>
+                        <td><b>NAME</b></td>
+                        <td><b>AGE</b></td>
+                        <td><b>ADDRESS</b></td>
+                    </thead>
                     <c:forEach var="item" items="${cus}">
-                        <tr>
+                        <tbody>
                             <td>${item.getId() }</td>
                             <td>${item.getName() }</td>
                             <td>${item.getAge() }</td>
                             <td>${item.getAddress() }</td>
-                        </tr>
+                        </tbody>
 
                     </c:forEach>
                 </table>
